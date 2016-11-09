@@ -49,31 +49,35 @@ var Roots = {
 			  
 			  containerHeight = $(window).outerHeight() - headerHeight - footerHeight;
 			  
-			  $('.heritage_item').css({'height':containerHeight});
+			  $('.heritage_image').css({'height':containerHeight});
+			  $('.hover_text_content_wrapper').css({'height':0});
+			  //$('.heritage_item').css({'height':containerHeight});
 			  
-			  $('.hover_text').css({'bottom':$('.overlay_container').outerHeight()});
+			  $('.hover_text').css({'bottom':$('#overlay').outerHeight()});
 			  
-			  $('.heritage_item').unbind('mouseenter');			  
+			  $('.heritage_item').unbind('mouseenter');	
 			  $('.heritage_item').on('mouseenter',function(){
-				  $(this).find('.hover_text').addClass('open');
-				  console.log('number '+ $('.heritage_item').index($(this))+ ' is on hover');
-				  var index = $('.heritage_item').index($(this));
-				  var contentHeight = $(this).find('.hover_text_content').outerHeight();
-				  
-				  
-				  $(this).find('.hover_text_content_wrapper').animate({height:contentHeight}, 300);
+				  if($(window).width() >= 992){
+					  $(this).find('.hover_text').addClass('open');
+					  var index = $('.heritage_item').index($(this));
+					  var contentHeight = $(this).find('.hover_text_content').outerHeight();
+					  
+					  $(this).find('.hover_text_content_wrapper').animate({height:contentHeight}, 300);
+				  }
               });
 			  
 			  $('.heritage_item').unbind('mouseleave');
 			  $('.heritage_item').on('mouseleave',function(){
-				  $(this).find('.hover_text').removeClass('open');
-				  var index = $('.heritage_item').index($(this));
-				  
-				  
-				  $(this).find('.hover_text_content_wrapper').animate({height:0}, 300);
+				  if($(window).width() >= 992){
+					  $(this).find('.hover_text').removeClass('open');
+					  var index = $('.heritage_item').index($(this));
+					  
+					  $(this).find('.hover_text_content_wrapper').animate({height:0}, 300);
+				  }
               });
 		  }else{
-			  return;  
+			  $('.heritage_image').css({'height':' '});
+			  $('.hover_text_content_wrapper').css({'height':'auto'});
 		  }
 	  }
 	  
