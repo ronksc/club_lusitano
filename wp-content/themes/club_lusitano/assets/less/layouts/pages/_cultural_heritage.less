@@ -1,0 +1,139 @@
+//===============================================================================
+//===============================================================================
+// Base
+//===============================================================================
+//===============================================================================
+
+.page-template-template-cultural-heritage{
+	.cultural-heritage{
+		position:relative;
+		.heritage_container{
+			.heritage_item{
+				padding:0;
+				
+			}
+		}
+	}
+}
+
+//===============================================================================
+//===============================================================================
+// tablet
+//===============================================================================
+//===============================================================================
+@media (min-width: @screen-sm-min) {
+
+}
+
+//===============================================================================
+//===============================================================================
+// Desktop
+//===============================================================================
+//===============================================================================
+@media (min-width: @screen-md-min) {
+	.page-template-template-cultural-heritage{
+		.cultural-heritage{
+			.heritage_container{
+				.heritage_item{
+					//min-height:500px;
+					box-shadow: -9px 0 10px -5px rgba(0, 0, 0, 0.5) inset;
+					cursor:pointer;
+				}
+			}
+		
+			.overlay_container{
+				position:absolute;
+				bottom:0;
+				left:0;
+				width:100%;
+				text-align:center;
+				
+				.hover_text_container{
+					display:table;
+					width:100%;
+					.hover_text{
+						
+						padding:0;				
+						border-bottom:5px solid #000;
+						float:none;
+						display:table-cell;
+						vertical-align: bottom;
+
+						.hover_text_header{
+							background:rgba(255,255,255,0.9);
+							font-size:14px;
+							font-family:Crimson Text;
+							font-weight:600;
+							color:#B4915B;
+							padding:15px 0 10px 0;
+							cursor:pointer;
+						}
+						
+						.hover_text_content_wrapper{
+							background:rgba(255,255,255,0.9);
+							height: 0;
+							overflow: hidden;
+							
+							.hover_text_content{
+								padding:0 10% 20px 10%;
+								font-size: 15px;
+								font-weight: 300;
+							}
+						}
+						
+						&.feature{
+							border-color:#D23428;
+						}
+						
+						&.culture{
+							border-color:#009345;
+						}
+						
+						&.language{
+							border-color:#06509D;
+						}
+						
+						&.cuisine{
+							border-color:#F6921E;
+						}
+						
+						&.open{
+							.hover_text_header{
+								font-size:20px;
+							}
+						}
+					}
+				}
+				
+				.fullwidth_overlay{
+					background:rgba(255,255,255,0.9);
+					h2{
+						color:#B4915B;
+						font-size:50px;
+						font-family:Crimson Text;
+						display:inline-block;
+						line-height:80%;
+						width:100%;
+						text-align:center;
+						margin:45px 0;
+						span{
+							display:block;
+							font-style:italic;
+							display:block;
+							text-align:center;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+//===============================================================================
+//===============================================================================
+// Wide desktop
+//===============================================================================
+//===============================================================================
+@media (min-width: @screen-lg-min) {
+
+}
