@@ -38,26 +38,19 @@
 					//min-height:500px;
 					box-shadow: -9px 0 10px -5px rgba(0, 0, 0, 0.5) inset;
 					cursor:pointer;
-				}
-			}
-		
-			.overlay_container{
-				position:absolute;
-				bottom:0;
-				left:0;
-				width:100%;
-				text-align:center;
-				
-				.hover_text_container{
-					display:table;
-					width:100%;
+					position:relative;
+					
 					.hover_text{
 						
 						padding:0;				
 						border-bottom:5px solid #000;
-						float:none;
-						display:table-cell;
-						vertical-align: bottom;
+						text-align:center;
+						position:absolute;
+						bottom:0;
+						
+						//float:none;
+						//display:table-cell;
+						//vertical-align: bottom;
 
 						.hover_text_header{
 							background:rgba(255,255,255,0.9);
@@ -67,6 +60,7 @@
 							color:#B4915B;
 							padding:15px 0 10px 0;
 							cursor:pointer;
+							transition: all 0.1s ease-in-out;
 						}
 						
 						.hover_text_content_wrapper{
@@ -99,11 +93,26 @@
 						
 						&.open{
 							.hover_text_header{
-								font-size:20px;
+								font-size:18px;
+								padding:25px 0 15px 0;
 							}
 						}
 					}
 				}
+			}
+		
+			.overlay_container{
+				position:absolute;
+				bottom:0;
+				left:0;
+				width:100%;
+				text-align:center;
+				
+				/*.hover_text_container{
+					display:table;
+					width:100%;*/
+					
+				//}
 				
 				.fullwidth_overlay{
 					background:rgba(255,255,255,0.9);
