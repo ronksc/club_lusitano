@@ -1,7 +1,8 @@
 <section class="banner">
     <div class="home_banner_container">
         <div class="banner_item">
-            <img src="<?=get_stylesheet_directory_uri()?>/assets/img/img_home_banner_dummy.jpg" class="img-responsive" />
+            <img src="<?=get_stylesheet_directory_uri()?>/assets/img/img_home_banner_dummy.jpg" class="img-responsive hidden-xs hidden-sm visible-md visible-lg" />
+            <div class="banner_bg visible-xs visible-sm hidden-md hidden-lg" style="background:url(<?=get_stylesheet_directory_uri()?>/assets/img/img_home_banner_dummy.jpg) no-repeat center / cover;"></div>
             <div class="banner_text">
                 <h2><span>Welcome to</span>CLUB LUSITANO</h2>
                 <p>an exclusive preserve for<br />Hong Kong's Portuguese community »</p>
