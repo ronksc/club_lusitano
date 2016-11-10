@@ -76,7 +76,7 @@ var Roots = {
 				  }
               });
 		  }else{
-			  $('.heritage_image').css({'height':' '});
+			  $('.heritage_image').css({'height':'auto'});
 			  $('.hover_text_content_wrapper').css({'height':'auto'});
 		  }
 	  }
