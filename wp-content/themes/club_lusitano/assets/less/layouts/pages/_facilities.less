@@ -10,8 +10,41 @@
 		
 		.facilities_item{
 			width:100%;
-			margin-bottom:20px;
 			position:relative;
+			
+			.overlay{
+				.facilities_name{
+					display:none;
+				}
+				
+				.facilities_detail{
+					background:#231F20;
+					text-align:center;
+					padding:50px 0;
+					.facilities_name{
+						display:block;
+						color: #b4915b;
+						font-family: Crimson Text;
+						font-size: 36px;
+						line-height: 100%;
+						text-transform: uppercase;
+						margin-bottom:30px;
+					}
+					
+					.detail_content{
+						padding:0 10%;
+						color:#fff;
+						width:100%;
+						font-family:Lato;
+						font-size:20px;
+						line-height:120%;
+						a{
+							color:#fff;
+							display:block;
+						}
+					}
+				}
+			}
 		}		
 	}
 }
@@ -35,6 +68,8 @@
 		.facilities_landing{
 			.facilities_item{
 				width:264px;
+				margin-bottom:20px;
+				
 				&:nth-last-child(-n+3){
 					margin-bottom:0;
 				}
@@ -47,6 +82,7 @@
 					left:0;
 					
 					.facilities_name{
+						display:block;
 						position:absolute;
 						bottom:15px;
 						left:20px;
@@ -59,6 +95,7 @@
 					}
 					
 					.facilities_detail{
+						padding:0;
 						display:none;
 						height: 100%;
 						left: 0;
@@ -67,33 +104,21 @@
 						transition: all 0.1s ease-in-out 0s;
 						width: 100%;
 						background:rgba(0,0,0,0.5);
+						text-align:left;
 						
 						.facilities_name{
-							color: #b4915b;
 							display: block !important;
-							font-family: Crimson Text;
-							font-size: 36px;
 							left: 0;
-							line-height: 100%;
 							padding: 15px 0 0 20px;
 							position: relative;
-							text-transform: uppercase;
 							top: 0;
+							margin-bottom:0;
 						}
 						.detail_content{
-							color:#fff;
 							position:absolute;
 							bottom:15px;
 							left:0;
-							width:100%;
-							font-family:Lato;
-							font-size:20px;
-							line-height:120%;
 							padding:0 20px;
-							a{
-								color:#fff;
-								display:block;
-							}
 						}
 					}
 					
