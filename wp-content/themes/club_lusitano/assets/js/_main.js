@@ -89,6 +89,32 @@ var Roots = {
 		 initHeritageItemHeight();
 	  });
     }
+  },
+  page_template_template_facilities: {
+	init: function(){
+		$(document).ready(function(){
+			var container = $('#facilities');
+	 
+			container.isotope({
+				itemSelector: '.facilities_item',
+				layoutMode: 'moduloColumns',
+				moduloColumns: {
+					columnWidth: container.find('.item').not('.wide').get(0),
+					gutter: 20
+				}
+			});
+			 
+			container.imagesLoaded().progress( function() {
+				console.log('images loaded');
+				container.isotope('layout');
+			});						   
+		});
+		
+		$(window).resize(function(){
+			//console.log($('.container').outerWidth());
+			console.log($(window).outerWidth());
+		});
+	}
   }
 };
 
