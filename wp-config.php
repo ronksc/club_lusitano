@@ -16,18 +16,24 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'clublusitano');
+switch ($_SERVER['SERVER_NAME']) {
 
-/** MySQL database username */
-define('DB_USER', 'root');
+  case "local.clublusitano.com":
+    define('DB_NAME', 'clublusitano');
+    define( 'WP_SITEURL',  'http://local.clublusitano.com' );
+    define( 'WP_HOME', 'http://local.clublusitano.com' );
+    define( 'DB_USER',     'root' );
+    define( 'DB_PASSWORD', 'root' );
+    define( 'DB_HOST',     'localhost' );
 
-/** MySQL database password */
-define('DB_PASSWORD', 'root');
-define( 'WP_SITEURL',  'http://local.clublusitano.com' );
-define( 'WP_HOME', 'http://local.clublusitano.com' );
-
-/** MySQL hostname */
-define('DB_HOST', 'localhost');
+  case "clublusitano.nowwhat.hk":
+    define( 'DB_NAME',     'purapharm' );
+    define( 'WP_SITEURL',  'http://clublusitano.nowwhat.hk' );
+    define( 'WP_HOME', 'http://clublusitano.nowwhat.hk' );
+    define('DB_USER', 'nowwhat');
+	define('DB_PASSWORD', '20273214');
+    define( 'DB_HOST',     'localhost' );
+}
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
