@@ -27,7 +27,7 @@ switch ($_SERVER['SERVER_NAME']) {
     define( 'DB_HOST',     'localhost' );
 
   case "clublusitano.nowwhat.hk":
-    define( 'DB_NAME',     'purapharm' );
+    define( 'DB_NAME',     'nowwhat_clublusitano' );
     define( 'WP_SITEURL',  'http://clublusitano.nowwhat.hk' );
     define( 'WP_HOME', 'http://clublusitano.nowwhat.hk' );
     define('DB_USER', 'nowwhat');
