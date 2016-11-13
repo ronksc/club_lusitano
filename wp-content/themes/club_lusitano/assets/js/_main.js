@@ -115,6 +115,43 @@ var Roots = {
 			console.log($(window).outerWidth());
 		});
 	}
+  },
+  page_template_template_facilities_content:{
+	init: function(){
+		function initSlider(){
+			if($('.facilities_slider').length > 0 && $(window).outerWidth() >= 992){
+				console.log('initSlider');
+				$('.facilities_slider').slick({
+				  dots: false,
+				  infinite: false,
+				  autoplay: true,
+				  autoplaySpeed: 5000,
+				  speed: 300,
+				  slidesToShow: 1,
+				  fade: true,
+				  cssEase: 'linear'
+				  //adaptiveHeight: true
+				});	
+				
+				$('.facilities_gallery_container a').unbind('click');
+				$('.facilities_gallery_container a').click(function(){
+					$('.facilities_slider').slick('slickGoTo', $('.facilities_gallery_container a').index($(this)));
+				});
+			}else{
+				if($('.facilities_slider').hasClass('slick-initialized')){
+					$('.facilities_slider').slick('unslick');
+				}
+			}
+		}
+		
+		$(document).ready(function(){
+			initSlider();			   
+		});	
+		
+		$(window).resize(function(){
+			initSlider();						  
+		});
+	}
   }
 };
 
