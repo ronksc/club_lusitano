@@ -1,0 +1,267 @@
+//===============================================================================
+//===============================================================================
+// Base
+//===============================================================================
+//===============================================================================
+
+.history_content{
+	background:#F2F3F4;
+	padding-bottom:25px;
+	
+	.hero_banner{
+		width:100%;
+		text-align:center;
+		box-shadow: 0 -10px 10px -12px rgba(0, 0, 0, 0.5) inset;
+		margin-bottom:50px;
+		
+		.img-responsive{
+			max-width:80%;
+			width:auto;
+			height:100%;
+			display:inline-block;
+		}
+	}
+	
+	.page_title{
+		font-size:50px;
+		font-family:Crimson Text;
+		line-height:100%;
+		color:#B4915B;
+		//border-bottom:1px solid #B4915B;
+		width:100%;
+		text-align:center;
+		display:block;
+		padding:0 10%;
+		margin-bottom:50px;
+	}
+	
+	.history_intro_container{
+		.intro_text{
+			width:100%;
+			padding:0 15px;
+			font-size:20px;
+			font-family:Lato;
+			font-weight:300;
+			color:#000;
+			text-align:center;
+			margin:0 auto;
+			line-height:180%;
+		}
+	
+		.history_timeline{
+			margin-bottom:50px;
+			
+			.timeline_container{
+				padding:0;				
+				.timeline_subContainer{
+					padding:0 15px;
+					
+					box-shadow: 0 -10px 10px -12px rgba(0, 0, 0, 0.5) inset;
+				}
+			
+				.timeline_item{
+					padding:0;
+					border-right:1px solid #B4915B;
+					
+					.timeline_text_wrapper{
+						text-align:center;
+						color:#B4915B;
+						font-family:Crimson Text;
+						line-height:100%;
+						font-size:21px;
+						position:relative;
+						
+						.timeline_text{
+							padding:20px 10px;
+							span{
+								display:block;
+							}
+							
+							&.verticle_align{
+								position:absolute;
+								width:100%;
+								top:50%;
+								left:0;
+								transform:translateY(-50%);
+							}
+						}
+					}
+					
+					
+					&:first-child{
+						//padding-left:15px;
+						border-left:1px solid #B4915B;
+					}
+					
+					&:last-child{
+						//padding-right:15px;
+						border-right:1px solid #B4915B;
+					}
+				}
+			}
+		}
+	}
+	
+	.media_content{		
+		.media_item{
+			margin-bottom:60px;
+		
+			.media_wrapper{
+				margin-bottom:10px;
+			}
+			
+			.caption{
+				width:100%;
+				//text-align:right;
+				text-align:center;
+				font-size:15px;
+				font-weight:300;
+				font-family:Lato;
+				color:#7F8084;
+			}
+		}
+	}
+	
+	.text_content{
+		font-size:20px;
+		font-family:Lato;
+		font-weight:300;
+		color:#000;
+		line-height:180%;
+		
+		.bold{
+			font-weight:700;
+		}
+	}
+}
+
+//===============================================================================
+//===============================================================================
+// tablet
+//===============================================================================
+//===============================================================================
+@media (min-width: @screen-sm-min) {
+
+}
+
+//===============================================================================
+//===============================================================================
+// Desktop
+//===============================================================================
+//===============================================================================
+@media (min-width: @screen-md-min) {
+	.history_content{
+		.hero_banner{
+			.img-responsive{
+				max-width:100%;
+			}
+		}
+		
+		.page_title{
+			border-bottom:1px solid #B4915B;
+			padding:0 10% 45px 10%;
+		}
+		
+		.history_intro_container{
+			.intro_text{
+				width:60%;
+				padding:0;
+			}
+			
+			.history_timeline{
+				margin-bottom:50px;
+				
+				.timeline_container{
+					padding:0;
+						
+					.timeline_subContainer{
+					    padding: 0;
+						
+						&:last-child{
+							.timeline_item{
+								&:last-child{
+									border-right:1px solid transparent;
+								}
+							}
+						}
+					}
+				
+					.timeline_item{
+						padding:0;
+						text-align:center;
+						color:#B4915B;
+						border-right:1px solid #B4915B;
+						
+						&:first-child{
+							padding-left:0;
+							border-left:1px solid transparent;
+						}
+						
+						&:last-child{
+							padding-right:0;
+							border-right:1px solid #B4915B;
+						}
+					}
+				}
+			}
+		}
+		
+		.media_content{		
+			.media_item{
+				.caption{
+					text-align:right;
+				}
+			}
+		}
+	}
+}
+
+//===============================================================================
+//===============================================================================
+// Wide desktop
+//===============================================================================
+//===============================================================================
+@media (min-width: @screen-lg-min) {
+	.history_content{
+		.hero_banner{
+			.img-responsive{
+				max-width:100%;
+			}
+		}
+		
+		.history_intro_container{
+			.intro_text{
+				width:60%;
+				padding:0;
+			}
+			
+			.history_timeline{
+				box-shadow: 0 -10px 10px -12px rgba(0, 0, 0, 0.5) inset;
+				.timeline_container{					
+					&:last-child{
+						.timeline_subContainer{
+							&:last-child{
+								.timeline_item{
+									&:last-child{
+										border-right:1px solid transparent;
+									}
+								}
+							}
+						}
+					}
+					
+					.timeline_subContainer{	
+						box-shadow:none;
+						&:nth-child(2){
+							.timeline_item{
+								&:last-child{
+									border-right:1px solid #B4915B;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

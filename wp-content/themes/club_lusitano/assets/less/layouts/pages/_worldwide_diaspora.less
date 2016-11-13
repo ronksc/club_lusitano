@@ -1,0 +1,121 @@
+//===============================================================================
+//===============================================================================
+// Base
+//===============================================================================
+//===============================================================================
+
+.diaspora_content_container{
+	background:#fff;
+	padding:25px 0;
+	
+	.page_title{
+		font-size:50px;
+		font-family:Crimson Text;
+		line-height:100%;
+		color:#B4915B;
+		border-bottom:1px solid #B4915B;
+		width:100%;
+		text-align:center;
+		display:block;
+		padding:10px 10% 30px 10%;
+		text-transform:uppercase;
+	}
+	
+	.diaspora_group{
+		box-shadow: 0 -10px 10px -12px rgba(0, 0, 0, 0.5) inset;
+		padding-bottom:40px;
+		
+		&:last-child{
+			box-shadow:none;
+		}
+		
+		.sub_title{
+			font-size:30px;
+			font-family:Crimson Text;
+			line-height:100%;
+			color:#B4915B;
+			width:100%;
+			text-align:center;
+			display:block;
+			//margin-bottom:40px;
+			margin-top:50px;
+		}
+		
+		.diaspora_content{
+			.diaspora_item{
+				margin-top:60px;
+				font-family:Lato;
+				font-size:20px;
+				color:#221F1F;
+				h3{
+					margin: 0 0 20px 0;
+					font-weight:700;
+				}
+				p{
+					margin-bottom:0;
+					line-height:180%;
+					font-weight:300;
+				}
+				
+				a{
+					color:#221F1F;
+				}
+			}
+		}		
+	}
+}
+
+//===============================================================================
+//===============================================================================
+// tablet
+//===============================================================================
+//===============================================================================
+@media (min-width: @screen-sm-min) {
+
+}
+
+//===============================================================================
+//===============================================================================
+// Desktop
+//===============================================================================
+//===============================================================================
+@media (min-width: @screen-md-min) {
+	.diaspora_content_container{	
+		.diaspora_group{		
+			.diaspora_content{
+				.diaspora_item{
+					padding: 0 5%;
+					
+					&:first-child{
+						padding-left:0;
+					}
+					
+					&:last-child{
+						padding-right:0;
+					}
+					
+					.diaspora_inner_container{
+						width:95%;	
+					}
+				}
+			}		
+		}
+	}
+}
+
+//===============================================================================
+//===============================================================================
+// Wide desktop
+//===============================================================================
+//===============================================================================
+@media (min-width: @screen-lg-min) {
+	.diaspora_content_container{	
+		.diaspora_group{		
+			.diaspora_content{
+				.diaspora_item{
+					padding: 0 5%;
+				}
+			}		
+		}
+	}
+}

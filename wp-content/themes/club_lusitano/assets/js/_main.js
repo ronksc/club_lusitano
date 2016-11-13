@@ -152,6 +152,35 @@ var Roots = {
 			initSlider();						  
 		});
 	}
+  },
+  page_template_template_history:{
+	init: function(){
+		function initTimelineText(){
+			var maxHeight = 0;
+			var timeline_text_count = 0;
+			
+			$('.timeline_text').each(function(){
+				timeline_text_count++;
+				var selfHeight = $(this).outerHeight();
+				if(selfHeight > maxHeight){
+					maxHeight = selfHeight;	
+				}
+				
+				if(timeline_text_count === $('.timeline_text').length){
+					$('.timeline_text_wrapper').css({'height':maxHeight});	
+					$('.timeline_text').addClass('verticle_align');
+				}
+			});
+		}
+		
+		$(document).ready(function(){
+			initTimelineText();
+		});
+		
+		$(window).resize(function(){
+			initTimelineText();
+		});
+	}
   }
 };
 
