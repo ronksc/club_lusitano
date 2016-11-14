@@ -6,7 +6,12 @@
     </div>
 	<div class="clearfix heritage_container">
         <div class="col-sm-3 heritage_item">
-			<div class="heritage_image" style="background:url(<?=get_stylesheet_directory_uri()?>/assets/img/cultural_heritage/img_feature.jpg) no-repeat 0 0 / cover;"></div>
+			<?php 
+				$feature_image = get_field("feature_stories_image", $post->ID);
+	            $feature_link = get_field("feature_stories_link", $post->ID);
+			?>
+            
+            <div class="heritage_image" style="background:url(<?=$feature_image?>) no-repeat 0 0 / cover;"></div>
             <div class="hover_text feature">
                 <div class="hover_text_header">FEATURE STORIES</div>
                 <div class="hover_text_content_wrapper">
@@ -15,13 +20,14 @@
                     </div>
                 </div>
             </div>
-            <?php 
-	            $feature_link = get_field("feature_stories_link", $post->ID);
-			?>
             <a href="<?=get_permalink($feature_link[0]->ID)?>" class="overlay_link"></a>
         </div>
         <div class="col-sm-3 heritage_item">
-			<div class="heritage_image" style="background:url(<?=get_stylesheet_directory_uri()?>/assets/img/cultural_heritage/img_culture.jpg) no-repeat 0 0 / cover;"></div>
+        	<?php
+				$cultural_tradition_image = get_field("cultural_tradition_image", $post->ID);
+	            $cultural_tradition_link = get_field("cultural_tradition_link", $post->ID);
+			?>
+			<div class="heritage_image" style="background:url(<?=$cultural_tradition_image?>) no-repeat 0 0 / cover;"></div>
         	<div class="hover_text culture">
             	<div class="hover_text_header">CULTURE & TRADITIONS</div>
                 <div class="hover_text_content_wrapper">
@@ -30,13 +36,15 @@
                     </div>
                 </div>
             </div> 
-            <?php 
-	            $cultural_tradition_link = get_field("cultural_tradition_link", $post->ID);
-			?>
+            
             <a href="<?=get_permalink($cultural_tradition_link[0]->ID)?>" class="overlay_link"></a>
         </div>
         <div class="col-sm-3 heritage_item">
-			<div class="heritage_image" style="background:url(<?=get_stylesheet_directory_uri()?>/assets/img/cultural_heritage/img_language.jpg) no-repeat 0 0 / cover;"></div>
+        	<?php 
+				$language_image = get_field("language_image", $post->ID);
+	            $language_link = get_field("language_link", $post->ID);
+			?>
+			<div class="heritage_image" style="background:url(<?=$language_image?>) no-repeat 0 0 / cover;"></div>
         	<div class="hover_text language">
             	<div class="hover_text_header">LANGUAGE</div>
                 <div class="hover_text_content_wrapper">
@@ -45,13 +53,15 @@
                     </div>
                 </div>
             </div>
-            <?php 
-	            $language_link = get_field("language_link", $post->ID);
-			?>
+            
             <a href="<?=get_permalink($language_link[0]->ID)?>" class="overlay_link"></a>
         </div>
         <div class="col-sm-3 heritage_item">
-			<div class="heritage_image" style="background:url(<?=get_stylesheet_directory_uri()?>/assets/img/cultural_heritage/img_cuisine.jpg) no-repeat 0 0 / cover;"></div>
+        	<?php 
+				$cuisine_image = get_field("cuisine_image", $post->ID);
+	            $cuisine_link = get_field("cuisine_link", $post->ID);
+			?>
+			<div class="heritage_image" style="background:url(<?=$cuisine_image?>) no-repeat 0 0 / cover;"></div>
         	<div class="hover_text cuisine">
             	<div class="hover_text_header">CUISINE</div>
                 <div class="hover_text_content_wrapper">
@@ -60,9 +70,7 @@
                     </div>
                 </div>
             </div>
-            <?php 
-	            $cuisine_link = get_field("cuisine_link", $post->ID);
-			?>
+            
             <a href="<?=get_permalink($cuisine_link[0]->ID)?>" class="overlay_link"></a>
         </div>
     </div>
