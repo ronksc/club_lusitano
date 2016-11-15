@@ -26,7 +26,7 @@ function facility_register() {
       'capability_type' => 'post',
       'hierarchical' => true,
       'menu_position' => 20,
-      'supports'      => array( 'title', 'editor'),
+      'supports'      => array( 'title', 'editor', 'page-attributes'),
   );
   register_post_type( 'facility' , $args );
 }
