@@ -1,8 +1,40 @@
+
 <section class="facilities_landing">
 	<div class="container">
 		<div class="row">
 			<div id="facilities">
-				<div class="facilities_item">
+				<?php
+				$args = array( 'numberposts' => -1, 'post_type' => 'facility', 'post_status' => 'publish', 'order' => 'ASC', 'orderby' => 'menu_order', 'suppress_filters' => 0);
+				$results = get_posts( $args );
+				foreach( $results as $result ) : 
+					//print_r($result);
+					$facilities_image = get_field('listing_page_image', $result->ID);
+					
+					//print_r($facilities_image);
+					$facilities_name = get_field('listing_page_name', $result->ID);
+					$facilities_description = get_field('listing_page_description', $result->ID);
+				?>
+					<div class="facilities_item">
+						<img src="<?=$facilities_image['url']?>" class="img-responsive" />
+						<div class="overlay">
+							<div class="facilities_name">
+								<!--28/f<br />O RETIRO-->
+								<?=$facilities_name?>
+							</div>
+							<div class="facilities_detail">
+								<div class="facilities_name">
+									<?=$facilities_name?>
+								</div>
+								<div class="detail_content">
+									<?=$facilities_description?>
+								</div>
+							</div>
+						</div>
+						<a href="<?=get_permalink( $result->ID )?>" class="overlay_link"></a>
+					</div>
+				<?php endforeach; ?>
+			
+				<!--<div class="facilities_item">
 					<img src="<?=get_stylesheet_directory_uri()?>/assets/img/facilities/img_1.jpg" class="img-responsive" />
 					<div class="overlay">
 						<div class="facilities_name">
@@ -145,7 +177,7 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</div>-->
 			</div>
 		</div>
 	</div>	
