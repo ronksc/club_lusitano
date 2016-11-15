@@ -23,9 +23,11 @@ function roots_setup() {
   // http://codex.wordpress.org/Function_Reference/add_image_size
   add_theme_support('post-thumbnails');
 
+  add_image_size( 'facility-thumbnail', 94, 40, array( 'center', 'center' ) );
+
   // Add post formats
   // http://codex.wordpress.org/Post_Formats
-  add_theme_support('post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'video', 'audio'));
+  //add_theme_support('post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'video', 'audio'));
 
   // Add HTML5 markup for captions
   // http://codex.wordpress.org/Function_Reference/add_theme_support#HTML5
