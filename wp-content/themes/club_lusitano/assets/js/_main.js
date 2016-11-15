@@ -29,6 +29,24 @@ var Roots = {
   home: {
     init: function() {
       // JavaScript to be fired on the home page
+	  function initBannerSlider(){
+		  if($('.home_banner_container').length > 0){
+			  $('.home_banner_container').slick({
+				  dots: true,
+				  infinite: false,
+				  autoplay: true,
+				  autoplaySpeed: 5000,
+				  speed: 300,
+				  slidesToShow: 1,
+				  cssEase: 'linear',
+				  adaptiveHeight: true
+			  });	
+		  }
+	  }
+	  
+	  $(document).ready(function(){
+		initBannerSlider();
+	  });
     }
   },
   // About us page, note the change from about-us to about_us.
@@ -121,12 +139,12 @@ var Roots = {
 	init: function(){
 		function initSlider(){
 			if($('.facilities_slider').length > 0 && $(window).outerWidth() >= 992){
-				console.log('initSlider');
+				//console.log('initSlider');
 				$('.facilities_slider').slick({
 				  dots: false,
 				  infinite: false,
-				  autoplay: true,
-				  autoplaySpeed: 5000,
+				  autoplay: false,
+				  //autoplaySpeed: 5000,
 				  speed: 300,
 				  slidesToShow: 1,
 				  fade: true,
