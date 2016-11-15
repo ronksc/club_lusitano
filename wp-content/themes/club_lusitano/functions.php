@@ -31,3 +31,10 @@ foreach ($roots_includes as $file) {
   require_once $filepath;
 }
 unset($file, $filepath);
+
+
+function new_excerpt_more($more) {
+       global $post;
+	return '<a class="btn_readmore" href="'. get_permalink($post->ID) . '">...More</a>';
+}
+add_filter('excerpt_more', 'new_excerpt_more');

@@ -26,12 +26,23 @@
             	<?php while (have_posts()) : the_post(); ?>
 				<div class="post_item clearfix">
 					<div class="thumb_container col-sm-3">
-						<img src="<?=get_stylesheet_directory_uri()?>/assets/img/cultural_heritage/img_listing_dummy.jpg" class="img-responsive" />
+					
+						<?php $image_results = get_field("post_image", $post->ID); 
+							//print_r($image_results);
+							
+							//echo sizeOf($image_results);
+							
+						if(!empty($image_results)){
+						?>
+							<img src="<?=$image_results['url'];?>" class="img-responsive" />	
+						<?php }else {?>
+							<img src="<?=get_stylesheet_directory_uri()?>/assets/img/img_no-img.png" class="img-responsive" />
+						<?php } ?>
 					</div>
 					
 					<div class="post_detail_container col-sm-9">
 						<div class="post_title">
-							<a href="#"><?php the_title(); ?></a>
+							<a href="<?=get_permalink($post->ID);?>"><?php the_title(); ?></a>
 						</div>
 						
 						<div class="post_author_detail">
@@ -48,7 +59,7 @@
                             <?php } ?>
 						</div>
 						
-						<div class="post_excerpt"><?=the_excerpt();?><a href="#" class="btn_readmore">More</a></div>
+						<div class="post_excerpt"><?=the_excerpt();?><!--<a href="#" class="btn_readmore">More</a>--></div>
 					</div>
 				</div>
                 <?php endwhile; ?>
