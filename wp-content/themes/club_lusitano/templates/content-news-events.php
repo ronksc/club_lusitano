@@ -1,7 +1,3 @@
-<?php
-	
-?>
-
 <section class="post_listing">
 	<div class="container">
 		<div class="row">
@@ -13,7 +9,8 @@
 			
 			<div class="post_listing_container">
             	<?php 
-					query_posts( 'post_type=post&post_status=publish&posts_per_page=10&paged='. get_query_var('paged').'&cat='.$blog_cat.'&year='.$blog_year );
+					//query_posts( 'post_type=post&post_status=publish&posts_per_page=10&paged='. get_query_var('paged').'&cat=7');
+					query_posts( 'post_type=post&post_status=publish&paged='. get_query_var('paged').'&cat=7');
 				?>
                 
                 <?php if (!have_posts()) : ?>
@@ -27,11 +24,8 @@
 				<div class="post_item clearfix">
 					<div class="thumb_container col-sm-3">
 					
-						<?php $image_results = get_field("post_image", $post->ID); 
-							//print_r($image_results);
-							
-							//echo sizeOf($image_results);
-							
+						<?php 
+						$image_results = get_field("post_image", $post->ID);
 						if(!empty($image_results)){
 						?>
 							<img src="<?=$image_results['url'];?>" class="img-responsive" />	
