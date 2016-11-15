@@ -33,7 +33,7 @@ var Roots = {
 		  if($('.home_banner_container').length > 0){
 			  $('.home_banner_container').slick({
 				  dots: true,
-				  infinite: false,
+				  infinite: true,
 				  autoplay: true,
 				  autoplaySpeed: 5000,
 				  speed: 300,
