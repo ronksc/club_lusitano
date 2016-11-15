@@ -1,7 +1,7 @@
 <section class="post_listing">
 	<div class="container">
 		<div class="row">
-			<div class="page_title">NEWS & EVENTS</div>
+			<div class="page_title"><?php the_title();?></div>
 			
 			<div class="sorting_container">
 				<span>sort by</span>
@@ -22,7 +22,6 @@
 						<div class="post_author_detail">
 							<span class="date">24TH NOVEMBER, 2016</span>
 							<span class="period">7-10PM </span>
-							<span class="venue">GRAND BALLROOM </span>
 						</div>
 						
 						<div class="post_excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ....<a href="#" class="btn_readmore">More</a></div>
@@ -42,7 +41,6 @@
 						<div class="post_author_detail">
 							<span class="date">24TH NOVEMBER, 2016</span>
 							<span class="period">7-10PM </span>
-							<span class="venue">GRAND BALLROOM </span>
 						</div>
 						
 						<div class="post_excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ....<a href="#" class="btn_readmore">More</a></div>
