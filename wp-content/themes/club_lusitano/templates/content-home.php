@@ -2,7 +2,8 @@
     <div class="home_banner_container">
 		<?php 
 			$banner_arr = get_field("banner", $post->ID);
-			foreach( $banner_arr as $banner ) : ?>
+			foreach( $banner_arr as $banner ) : 
+			?>
 			
 				<div class="banner_item">
 					<img src="<?=$banner['image']['url']?>" class="img-responsive hidden-xs hidden-sm visible-md visible-lg" />
@@ -10,6 +11,7 @@
 					<div class="banner_text">
 						<?=$banner['text']?>
 					</div>
+					<a href="<?=$banner['link']?>" class="overlay_link"></a>
 				</div>
 			
 		<?php endforeach;?>

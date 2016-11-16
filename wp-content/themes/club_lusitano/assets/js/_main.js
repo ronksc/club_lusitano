@@ -135,7 +135,7 @@ var Roots = {
 		});
 	}
   },
-  page_template_template_facilities_content:{
+  single_facility:{
 	init: function(){
 		function initSlider(){
 			if($('.facilities_slider').length > 0 && $(window).outerWidth() >= 992){
@@ -148,8 +148,8 @@ var Roots = {
 				  speed: 300,
 				  slidesToShow: 1,
 				  fade: true,
-				  cssEase: 'linear'
-				  //adaptiveHeight: true
+				  cssEase: 'linear',
+				  adaptiveHeight: true
 				});	
 				
 				$('.facilities_gallery_container a').unbind('click');
