@@ -22,6 +22,7 @@
 										<span>Shelly Street</span>
 									</div>
 								</div>
+								<a href="#" class="overlay_link"></a>
 							</div>
 							<div class="col-xs-6 timeline_item">
 								<img src="<?=get_stylesheet_directory_uri()?>/assets/img/history/img_timeline_2.jpg" class="img-responsive" />
@@ -31,6 +32,7 @@
 										<span>Relocation to<br />Ice House<br />Street</span>
 									</div>
 								</div>
+								<a href="#" class="overlay_link"></a>
 							</div>
 						</div>
 						<div class="col-sm-6 timeline_subContainer clearfix">
@@ -42,6 +44,7 @@
 										<span>World War<br />Two</span>
 									</div>
 								</div>
+								<a href="#" class="overlay_link"></a>
 							</div>
 							<div class="col-xs-6 timeline_item">
 								<img src="<?=get_stylesheet_directory_uri()?>/assets/img/history/img_timeline_4.jpg" class="img-responsive" />
@@ -51,6 +54,7 @@
 										<span>Post War<br />Period</span>
 									</div>
 								</div>
+								<a href="#" class="overlay_link"></a>
 							</div>
 						</div>
 					</div>
@@ -64,6 +68,7 @@
 										<span>Demolition<br />of 1st Ice House Street Building<br />and New<br />Building</span>
 									</div>
 								</div>
+								<a href="#" class="overlay_link"></a>
 							</div>
 							<div class="col-xs-6 timeline_item">
 								<img src="<?=get_stylesheet_directory_uri()?>/assets/img/history/img_timeline_6.jpg" class="img-responsive" />
@@ -72,6 +77,7 @@
 										<span>Members<br />Emigration<br />and Pre-1997<br />Membership</span>
 									</div>
 								</div>
+								<a href="#" class="overlay_link"></a>
 							</div>
 						</div>
 						<div class="col-sm-6 timeline_subContainer clearfix">
@@ -83,6 +89,7 @@
 										<span>21st Century</span>
 									</div>
 								</div>
+								<a href="#" class="overlay_link"></a>
 							</div>
 							<div class="col-xs-6 timeline_item">
 								<img src="<?=get_stylesheet_directory_uri()?>/assets/img/history/img_timeline_8.jpg" class="img-responsive" />
@@ -92,6 +99,7 @@
 										<span>Club Lusitano</span>
 									</div>
 								</div>
+								<a href="#" class="overlay_link"></a>
 							</div>
 						</div>
 					</div>

@@ -36,7 +36,9 @@
 					
 					<div class="post_detail_container col-sm-9">
 						<div class="post_title">
-							<a href="<?=get_permalink($post->ID);?>"><?php the_title(); ?></a>
+							<!--<a href="<?=get_permalink($post->ID);?>">-->
+							<?php the_title(); ?>
+							<!--</a>-->
 						</div>
 						
 						<div class="post_author_detail">

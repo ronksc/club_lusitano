@@ -8,9 +8,35 @@
 				</div>
 				
 				<div class="col-sm-7 col-sm-pull-5 contact_content">
-					<div class="greetings">We’d love to hear from you.</div>
+					<div class="greetings">
+						<!--We’d love to hear from you.-->
+						<?php the_content() ?>
+					</div>
 					
-					<div class="information_group">
+					<?php
+					
+					// check if the repeater field has rows of data
+					if( have_rows('contact_information') ):
+					
+						// loop through the rows of data
+						while ( have_rows('contact_information') ) : the_row(); ?>
+						<div class="information_group">
+							<?php the_sub_field('group_name'); ?>
+							
+							<?php the_sub_field('group_content'); ?>
+						</div>
+					<?php
+						endwhile;
+					
+					else :
+					
+						// no rows found
+					
+					endif;
+					
+					?>
+					
+					<!--<div class="information_group">
 						<h3>General Enquiries</h3>
 						<p>Tel: (852) 2523 5367</p>
 						<p>Email: info@clublusitano.com</p>
@@ -46,7 +72,7 @@
 						<p>Miss Denise Lillian Souza</p>
 						<p>Mr. Elliot Justin Yi Tuk Fung</p>
 						<p>Mr. Anthony Ernest Ismail</p>
-					</div>
+					</div>-->
 				</div>
 			</div>			
 		</div>
