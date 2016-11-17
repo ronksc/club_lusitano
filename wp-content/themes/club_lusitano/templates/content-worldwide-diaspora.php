@@ -1,126 +1,50 @@
 <section class="diaspora_content_container">
 	<div class="container">
 		<div class="row">
-			<div class="page_title">WORLDWIDE DIASPORA</div>
+			<div class="page_title"><?php the_title(); ?></div>
 			
-			<div class="diaspora_group">
-				<div class="sub_title">Macau Government and Macanese Community Organizations</div>
-				<div class="diaspora_content">
-					<div class="clearfix">
-						<div class="col-sm-4 diaspora_item">
-							<div class="diaspora_inner_container">
-								<h3>Consuladao-Geral de Portugal Em Macau e Hong Kong</h3>
-								<p>Vitor Sereno, Consul General, Rue Pedro Nolasco da Silva 45, Macau</p>
-								<p>Ph : +853 28356660</p>
-								<p>Fax: +853 2835 6658</p>
-								<p>Email: <a href="mailto:macau@mne.pt">macau@mne.pt</a></p>
-								<p><a href="http://www.cgportugal.org/" target="_blank">www.cgportugal.org/</a></p>
+			<?php
+			// check if the repeater field has rows of data
+			if( have_rows('unit_information') ):
+				// loop through the rows of data
+				while ( have_rows('unit_information') ) : the_row(); ?>
+				<div class="diaspora_group">
+					<div class="sub_title"><?php the_sub_field('group_title'); ?></div>
+					<?php if( have_rows('group_information') ):?>
+					<div class="diaspora_content">
+						<?php 
+						$rows_output = 0;
+						// loop through rows (sub repeater)
+						while( have_rows('group_information') ): the_row();
+							if ($rows_output % 3 == 0) { 
+								echo '<div class="clearfix">';
+							}
+						?>
+							<div class="col-sm-4 diaspora_item">
+								<div class="diaspora_inner_container">
+									<h3><?php the_sub_field('unit_name');?></h3>
+									<p>Vitor Sereno, Consul General, Rue Pedro Nolasco da Silva 45, Macau</p>
+									<p>Ph : +853 28356660</p>
+									<p>Fax: +853 2835 6658</p>
+									<p>Email: <a href="mailto:macau@mne.pt">macau@mne.pt</a></p>
+									<p><a href="http://www.cgportugal.org/" target="_blank">www.cgportugal.org/</a></p>
+								</div>
 							</div>
-						</div>
-						<div class="col-sm-4 diaspora_item">
-							<div class="diaspora_inner_container">
-								<h3>Instituto Internacional de Macau</h3>
-								<p>Rua de Berlim, Edifício Magnificent Court, 240, 2º (NAPE) – Macau </p>
-								<p>Tel: +853 2875 1727</p>
-								<p>Fax:+853 2875 1797</p>
-								<p>Email: <a href="mailto:iim@iimacau.org.mo">iim@iimacau.org.mo</a></p>
-								<p><a href="http://www.iimacau.org.mo/en/" target="_blank">www.iimacau.org.mo/en/</a></p>
-							</div>
-						</div>
-						<div class="col-sm-4 diaspora_item">
-							<div class="diaspora_inner_container">
-								<h3>Fundacao Oriente</h3>
-								<p>Avenida Brasília, Doca de Alcântara (Norte) 1350-352 Lisboa</p>
-								<p>Phone: +213 585 200</p>
-								<p>E-mail:  <a href="mailto:info@foriente.pt">info@foriente.pt</a></p>
-								<p><a href="http://www.foriente.pt/" target="_blank">www.foriente.pt/</a> & </p>
-								<p><a href="http://www.museudooriente.pt/" target="_blank">www.museudooriente.pt/</a></p>
-							</div>
-						</div>
+						<?php 
+							if ($rows_output % 3 == 2) {
+							  echo '</div>';
+						    }
+						    $rows_output++;
+						endwhile; 
+						echo '</div>';
+						?>
 					</div>
-					<div class="clearfix">
-						<div class="col-sm-4 diaspora_item">
-							<div class="diaspora_inner_container">
-								<h3>Consuladao-Geral de Portugal Em Macau e Hong Kong</h3>
-								<p>Vitor Sereno, Consul General, Rue Pedro Nolasco da Silva 45, Macau</p>
-								<p>Ph : +853 28356660</p>
-								<p>Fax: +853 2835 6658</p>
-								<p>Email: <a href="mailto:macau@mne.pt">macau@mne.pt</a></p>
-								<p><a href="http://www.cgportugal.org/" target="_blank">www.cgportugal.org/</a></p>
-							</div>
-						</div>
-						<div class="col-sm-4 diaspora_item">
-							<div class="diaspora_inner_container">
-								<h3>Instituto Internacional de Macau</h3>
-								<p>Rua de Berlim, Edifício Magnificent Court, 240, 2º (NAPE) – Macau </p>
-								<p>Tel: +853 2875 1727</p>
-								<p>Fax:+853 2875 1797</p>
-								<p>Email: <a href="mailto:iim@iimacau.org.mo">iim@iimacau.org.mo</a></p>
-								<p><a href="http://www.iimacau.org.mo/en/" target="_blank">www.iimacau.org.mo/en/</a></p>
-							</div>
-						</div>
-					</div>
+					<?php endif; ?>
 				</div>
-			</div>
-			<div class="diaspora_group">
-				<div class="sub_title">Macau Government and Macanese Community Organizations</div>
-				<div class="diaspora_content">
-					<div class="clearfix">
-						<div class="col-sm-4 diaspora_item">
-							<div class="diaspora_inner_container">
-								<h3>Consuladao-Geral de Portugal Em Macau e Hong Kong</h3>
-								<p>Vitor Sereno, Consul General, Rue Pedro Nolasco da Silva 45, Macau</p>
-								<p>Ph : +853 28356660</p>
-								<p>Fax: +853 2835 6658</p>
-								<p>Email: <a href="mailto:macau@mne.pt">macau@mne.pt</a></p>
-								<p><a href="http://www.cgportugal.org/" target="_blank">www.cgportugal.org/</a></p>
-							</div>
-						</div>
-						<div class="col-sm-4 diaspora_item">
-							<div class="diaspora_inner_container">
-								<h3>Instituto Internacional de Macau</h3>
-								<p>Rua de Berlim, Edifício Magnificent Court, 240, 2º (NAPE) – Macau </p>
-								<p>Tel: +853 2875 1727</p>
-								<p>Fax:+853 2875 1797</p>
-								<p>Email: <a href="mailto:iim@iimacau.org.mo">iim@iimacau.org.mo</a></p>
-								<p><a href="http://www.iimacau.org.mo/en/" target="_blank">www.iimacau.org.mo/en/</a></p>
-							</div>
-						</div>
-						<div class="col-sm-4 diaspora_item">
-							<div class="diaspora_inner_container">
-								<h3>Fundacao Oriente</h3>
-								<p>Avenida Brasília, Doca de Alcântara (Norte) 1350-352 Lisboa</p>
-								<p>Phone: +213 585 200</p>
-								<p>E-mail:  <a href="mailto:info@foriente.pt">info@foriente.pt</a></p>
-								<p><a href="http://www.foriente.pt/" target="_blank">www.foriente.pt/</a> & </p>
-								<p><a href="http://www.museudooriente.pt/" target="_blank">www.museudooriente.pt/</a></p>
-							</div>
-						</div>
-					</div>
-					<div class="clearfix">
-						<div class="col-sm-4 diaspora_item">
-							<div class="diaspora_inner_container">
-								<h3>Consuladao-Geral de Portugal Em Macau e Hong Kong</h3>
-								<p>Vitor Sereno, Consul General, Rue Pedro Nolasco da Silva 45, Macau</p>
-								<p>Ph : +853 28356660</p>
-								<p>Fax: +853 2835 6658</p>
-								<p>Email: <a href="mailto:macau@mne.pt">macau@mne.pt</a></p>
-								<p><a href="http://www.cgportugal.org/" target="_blank">www.cgportugal.org/</a></p>
-							</div>
-						</div>
-						<div class="col-sm-4 diaspora_item">
-							<div class="diaspora_inner_container">
-								<h3>Instituto Internacional de Macau</h3>
-								<p>Rua de Berlim, Edifício Magnificent Court, 240, 2º (NAPE) – Macau </p>
-								<p>Tel: +853 2875 1727</p>
-								<p>Fax:+853 2875 1797</p>
-								<p>Email: <a href="mailto:iim@iimacau.org.mo">iim@iimacau.org.mo</a></p>
-								<p><a href="http://www.iimacau.org.mo/en/" target="_blank">www.iimacau.org.mo/en/</a></p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+			<?php
+				endwhile;
+			endif;
+			?>
 		</div>
 	</div>	
 </section>
