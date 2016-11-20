@@ -50,6 +50,42 @@ a{
 	}
 }
 
+.nice-select{
+	border: medium none !important;
+    font-weight: 300 !important;
+    height: 25px !important;
+    line-height: 140% !important;
+    padding-left: 10px !important;
+    padding-right: 25px !important;
+	
+	&:after{
+		border-color: rgba(173, 0, 0, 0.2) !important;
+		height: 10px !important;
+		margin-top: -8px !important;
+		right: 10px !important;
+		width: 10px !important;
+	}
+	
+	.current{
+		border-bottom:1px solid rgba(173, 0, 0, 0.2);
+	}
+	
+	.list{
+		border:1px solid rgba(180, 145, 91, 0.2);
+		box-shadow: none!important;
+	}
+	
+	.option{
+		font-weight:300!important;
+		
+		&.selected{
+			font-weight:normal!important;
+		}
+	}
+}
+
+
+
 //===============================================================================
 //===============================================================================
 // tablet

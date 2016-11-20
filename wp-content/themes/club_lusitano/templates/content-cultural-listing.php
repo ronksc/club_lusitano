@@ -5,6 +5,14 @@
 	$category_string = implode(",", $page_category);
 	
 	//echo $category_string;
+	
+	if( isset($_GET['sort']) ){
+		$sort = $_GET['sort'];
+	}else{
+		$sort = 'desc';
+	}	
+	
+	$full_uri = get_permalink();
 ?>
 <section class="post_listing">
 	<div class="container">
@@ -12,13 +20,33 @@
 			<div class="page_title"><?php the_title();?></div>
 			
 			<div class="sorting_container">
-				<span>sort by</span>
-				
+				<div class="clearfix">
+					<span>sort by</span>
+					<div style="float:right">
+						<select id="post_sorting">
+							<option value="newest">Newest</option>
+							<option value="oldest">Oldest</option>
+						</select>
+					</div>
+				</div>
 			</div>			
 			<div class="post_listing_container">
 				<?php 
 					//query_posts( 'post_type=post&post_status=publish&posts_per_page=10&paged='. get_query_var('paged').'&cat=7');
-					query_posts( 'post_type=post&post_status=publish&paged='. get_query_var('paged').'&cat='.$category_string);
+					
+					
+					$args = array(
+						'post_type'  => 'post',
+						'post_status' => 'publish',
+						'cat' => $page_category,
+						//'meta_key' => 'date',
+						'orderby' => 'date',
+						'order' => $sort
+					);
+					
+					//query_posts( 'post_type=post&post_status=publish&paged='. get_query_var('paged').'&cat='.$category_string);
+					
+					query_posts($args);
 				?>
 				
 				<?php if (!have_posts()) : ?>
@@ -88,3 +116,7 @@
 		</div>
 	</div>
 </section>
+
+<script>
+	var full_url = '<?=$full_uri?>';
+</script>

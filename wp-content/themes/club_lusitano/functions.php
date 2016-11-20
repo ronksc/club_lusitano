@@ -39,3 +39,13 @@ function new_excerpt_more($more) {
 	return '<a class="btn_readmore" href="'. get_permalink($post->ID) . '">...More</a>';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
+
+function my_acf_google_map_api( $api ){
+	
+	$api['key'] = 'AIzaSyCpGcV1lNRwqsSS3ixl-VK9pKCgME_kEaI';
+	
+	return $api;
+	
+}
+
+add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');

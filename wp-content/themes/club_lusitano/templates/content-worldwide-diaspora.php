@@ -23,11 +23,11 @@
 							<div class="col-sm-4 diaspora_item">
 								<div class="diaspora_inner_container">
 									<h3><?php the_sub_field('unit_name');?></h3>
-									<p>Vitor Sereno, Consul General, Rue Pedro Nolasco da Silva 45, Macau</p>
-									<p>Ph : +853 28356660</p>
-									<p>Fax: +853 2835 6658</p>
-									<p>Email: <a href="mailto:macau@mne.pt">macau@mne.pt</a></p>
-									<p><a href="http://www.cgportugal.org/" target="_blank">www.cgportugal.org/</a></p>
+									<p><?php the_sub_field('address');?></p>
+									<p><?php the_sub_field('telephone');?></p>
+									<p><?php the_sub_field('fax');?></p>
+									<p><?php the_sub_field('email');?></p>
+									<p><?php the_sub_field('site');?></p>
 								</div>
 							</div>
 						<?php 
