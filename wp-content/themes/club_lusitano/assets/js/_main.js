@@ -207,6 +207,18 @@ var Roots = {
 					$('.timeline_text').addClass('verticle_align');
 				}
 			});
+			
+			$('.overlay_link').unbind('click');
+			$('.overlay_link').click(function(e){
+				e.preventDefault();
+				
+				var target = $(this).attr('href');
+				var target_buffer = $(target).outerHeight()+ 50;
+				
+				$('html, body').animate({
+                    scrollTop: $(target).offset().top - target_buffer
+                }, 1000);
+			});
 		}
 		
 		$(document).ready(function(){

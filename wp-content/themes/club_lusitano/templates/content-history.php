@@ -42,7 +42,7 @@
 										<span><?php the_sub_field('timeline_title'); ?></span>
 									</div>
 								</div>
-								<a href="#" class="overlay_link"></a>
+								<a href="#timeline_<?=$rows_output?>" class="overlay_link"></a>
 							</div>
 					<?php
 							if ($rows_output % 2 == 1) { 
@@ -64,8 +64,10 @@
 			// check if the repeater field has rows of data
 			if( have_rows('timeline') ):
 				// loop through the rows of data
+				$rows_output = 0;
+				
 				while ( have_rows('timeline') ) : the_row(); ?>
-				<div class="page_title">
+				<div class="page_title" id="timeline_<?=$rows_output?>">
 					<?php the_sub_field('timeline_year'); ?>
 					<?php the_sub_field('timeline_title'); ?>
 				</div>
@@ -91,7 +93,9 @@
 						<?php the_sub_field('timeline_content'); ?>
 					</div>
 				</div>
+                
 			<?php
+					$rows_output++;
 				endwhile;
 			endif;
 			?>

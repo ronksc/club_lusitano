@@ -34,6 +34,7 @@
 					padding:0;				
 					border-bottom:5px solid #000;
 					text-align:center;
+					z-index:800;
 					
 					.hover_text_header{
 						background:rgba(255,255,255,0.9);
@@ -85,13 +86,15 @@
 				padding:0 10%;
 				h2{
 					color:#B4915B;
-					font-size:50px;
+					//font-size:50px;
+					font-size:45px;
 					font-family:Crimson Text;
 					display:inline-block;
 					line-height:80%;
 					width:100%;
 					text-align:center;
-					margin:45px 0;
+					//margin:45px 0;
+					margin:35px 0;
 					span{
 						display:block;
 						font-style:italic;
@@ -199,6 +202,7 @@
 			color:#221F1F;
 			letter-spacing:4px;
 			margin-bottom:25px;
+			text-transform:uppercase;
 			span{
 				display:inline-block;
 			}
@@ -275,10 +279,22 @@
 		.cultural-heritage{
 			.heritage_container{
 				.heritage_item{
-					box-shadow: -9px 0 10px -5px rgba(0, 0, 0, 0.5) inset;
+					
 					cursor:pointer;
-					//position:relative;
+					position:relative;
 					min-height:none;
+					
+					&:after{
+						content:"";
+						//box-shadow: -9px 0 10px -5px rgba(0, 0, 0, 0.5) inset;
+						box-shadow: -20px 0 30px -20px rgba(0, 0, 0, 0.3) inset;
+						position:absolute;
+						top:0;
+						right:0;
+						height:100%;
+						width:40px;
+						z-index:850;
+					}
 					
 					.hover_text{
 						/*position:absolute;
@@ -317,9 +333,13 @@
 				position:absolute;
 				bottom:0;
 				left:0;
+				z-index:900;
 				.fullwidth_overlay{
 					padding:0;
 					background:rgba(255,255,255,0.9);
+					h2{
+						//margin:35px 0;
+					}
 				}
 			}
 		}
