@@ -157,10 +157,10 @@
 					border:2px solid #b4915b;
 					top:0;
 					left:0;
-					background:rgba(0,0,0,0.8);
+					background:rgba(0,0,0,0.65);
 				}
 				
-				&:hover::after{
+				&:hover::after, &.active:after{
 					display:block;
 				}
 			}
@@ -289,8 +289,11 @@
 							bottom:15px;
 							left:0;
 							padding:0 20px;
-							
 							font-size:15px;
+							
+							p{
+								margin-bottom:0;
+							}
 						}
 					}
 					

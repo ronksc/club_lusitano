@@ -58,8 +58,8 @@
 						if(!empty($image_results)){
 						?>
 							<img src="<?=$image_results['url'];?>" class="img-responsive" />	
-						<?php }else {?>
-							<img src="<?=get_stylesheet_directory_uri()?>/assets/img/img_no-img.png" class="img-responsive" />
+						<?php //}else {?>
+							<!--<img src="<?=get_stylesheet_directory_uri()?>/assets/img/img_no-img.png" class="img-responsive" />-->
 						<?php } ?>
 					</div>
 					

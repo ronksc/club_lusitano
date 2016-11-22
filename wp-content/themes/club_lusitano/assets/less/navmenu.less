@@ -84,6 +84,18 @@ footer{
 	color:#fff;
 	padding:25px 0;
 	font-family: 'Crimson Text', serif;
+	position:relative;
+	
+	&:before{
+		content: "";
+		box-shadow: 0 -10px 10px -8px rgba(0, 0, 0, 0.5);
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 30px;
+	}
+	
 	.detail{
 		margin-bottom:5px;
 		span{

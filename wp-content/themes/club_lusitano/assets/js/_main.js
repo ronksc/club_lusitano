@@ -165,9 +165,13 @@ var Roots = {
 				  adaptiveHeight: true
 				});	
 				
+				$('.facilities_gallery_container a').eq(0).addClass('active');
+				
 				$('.facilities_gallery_container a').unbind('click');
 				$('.facilities_gallery_container a').click(function(){
+					$('.facilities_gallery_container a').removeClass('active');
 					$('.facilities_slider').slick('slickGoTo', $('.facilities_gallery_container a').index($(this)));
+					$(this).addClass('active');
 				});
 			}else{
 				if($('.facilities_slider').hasClass('slick-initialized')){
