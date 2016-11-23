@@ -132,7 +132,7 @@ var Roots = {
 				layoutMode: 'moduloColumns',
 				moduloColumns: {
 					columnWidth: container.find('.item').not('.wide').get(0),
-					gutter: 20
+					gutter: 20.25
 				}
 			});
 			 

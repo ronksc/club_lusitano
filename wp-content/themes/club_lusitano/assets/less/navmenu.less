@@ -122,7 +122,11 @@ footer{
 //===============================================================================
 //===============================================================================
 @media (min-width: @screen-sm-min) {
-	
+	.navbar-brand{
+		img{
+			max-width:none;
+		}	
+	}
 }
 
 //===============================================================================
@@ -158,10 +162,23 @@ footer{
 			& > li{
 				float:none;
 				display:inline-block;
+				margin-right:25px;
+				
+				&:first-child{
+					text-align:left;
+				}
+				
+				&:last-child{
+					text-align:right;
+					float:right;
+					margin-right:0;
+				}
+				
 				& > a{
 					padding:13px 0 7px 0;
 					line-height:120%;
-					margin:0 20px;
+					//margin:0 20px;
+					margin:0;
 					color:#fff;
 					
 					&:hover, &:focus{
@@ -189,9 +206,22 @@ footer{
 	.navbar-default{
 		.navbar-nav{
 			& > li{
-				& > a{
-					margin:0 30px;
-				}
+				margin-right:59px;
+			}
+		}
+	}
+}
+
+//===============================================================================
+//===============================================================================
+// Extra Wide desktop
+//===============================================================================
+//===============================================================================
+@media (min-width: @screen-xl-min) {
+	.navbar-default{
+		.navbar-nav{
+			& > li{
+				margin-right:121px;
 			}
 		}
 	}
