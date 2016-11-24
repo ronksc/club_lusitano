@@ -42,4 +42,4 @@
 	</div>	
 </section>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpGcV1lNRwqsSS3ixl-VK9pKCgME_kEaI"></script>
+<script src="https://maps.googleapis.com/maps/api/js?language=en&key=AIzaSyCpGcV1lNRwqsSS3ixl-VK9pKCgME_kEaI"></script>
