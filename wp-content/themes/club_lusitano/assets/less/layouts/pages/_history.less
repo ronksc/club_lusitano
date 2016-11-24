@@ -45,8 +45,12 @@
 			font-weight:300;
 			color:#000;
 			text-align:center;
-			margin:0 auto;
+			margin:0 auto 10px auto;
 			line-height:180%;
+			
+			p{
+				display:inline-block;
+			}
 		}
 	
 		.history_timeline{
@@ -118,6 +122,10 @@
 					&:last-child{
 						//padding-right:15px;
 						border-right:1px solid #B4915B;
+						
+						&:after{
+							display:none;
+						}
 					}
 				}
 			}
