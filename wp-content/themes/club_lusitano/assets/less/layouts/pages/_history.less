@@ -65,7 +65,17 @@
 				.timeline_item{
 					position:relative;
 					padding:0;
-					border-right:1px solid #B4915B;
+					//border-right:1px solid #B4915B;
+					
+					&:after{
+						content:"";
+						position:absolute;
+						right:0;
+						top:0;
+						width:1px;
+						height:100%;
+						background:#B4915B;
+					}
 					
 					.overlay_link{
 						position:absolute;
@@ -226,9 +236,14 @@
 						color:#B4915B;
 						border-right:1px solid #B4915B;
 						
+						&:after{
+							display:none;
+						}
+						
 						&:first-child{
 							padding-left:0;
-							border-left:1px solid transparent;
+							//border-left:1px solid transparent;
+							border-left:none;
 						}
 						
 						&:last-child{
