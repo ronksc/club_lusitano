@@ -162,7 +162,8 @@
 	
 	.article_header{
 		text-align:center;
-	
+		padding:0 10%;
+			
 		.category{
 			font-family:'Crimson Text';
 			letter-spacing:4px;
@@ -191,8 +192,9 @@
 			}
 			
 			em{
-				display:block;
-				line-height:100%;
+				//display:block;
+				//line-height:100%;
+				//line-height:1.2;
 			}
 		}
 		
@@ -219,6 +221,17 @@
 		
 		.shareContainer{
 			margin-bottom:50px;
+			a{
+				float:none;
+				display:inline-block;
+				color:#000;
+				font-size:20px;
+				margin-left:40px;
+				
+				&:first-child{
+					margin-left:0;
+				}
+			}
 		}
 	}
 	
@@ -239,9 +252,11 @@
 		font-size:20px;
 		color:#221F1F;
 		line-height:180%;
+		padding:0 10%;
 	}
 	
 	.article_media{
+		padding:0 10%;
 		.media_container{
 			margin-bottom:60px;
 		

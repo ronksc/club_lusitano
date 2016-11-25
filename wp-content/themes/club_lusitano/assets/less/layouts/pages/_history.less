@@ -132,55 +132,65 @@
 		}
 	}
 	
-	.media_content{		
-		.media_item{
-			margin-bottom:60px;
+	.timeline_content{
+		padding-bottom:30px;
+		margin-bottom:40px;
+		box-shadow: 0 -30px 30px -35px rgba(0, 0, 0, 0.2) inset;
+		&:last-child{
+			box-shadow:none;
+			margin-bottom:0;
+		}		
 		
-			.media_wrapper{
-				margin-bottom:10px;
+		.media_content{		
+			.media_item{
+				margin-bottom:60px;
+			
+				.media_wrapper{
+					margin-bottom:10px;
+				}
+				
+				.caption{
+					width:100%;
+					//text-align:right;
+					text-align:center;
+					font-size:15px;
+					font-weight:300;
+					font-family:Lato;
+					color:#7F8084;
+				}
+			}
+		}
+		
+		.text_content{
+			font-size:20px;
+			font-family:Lato;
+			font-weight:300;
+			color:#000;
+			line-height:180%;
+			
+			.bold{
+				font-weight:700;
 			}
 			
-			.caption{
-				width:100%;
-				//text-align:right;
-				text-align:center;
-				font-size:15px;
-				font-weight:300;
-				font-family:Lato;
-				color:#7F8084;
+			/*.highlight-text{
+				color:#A99977; 
+				font-style:italic; 
+				font-weight:600; 
+				font-family:Crimson Text;
+				font-size:25px;
+			}*/
+			
+			blockquote{
+				border:0;
+				margin:20px 0 40px 0;
+				padding:0;
+				color:#A99977; 
+				font-style:italic; 
+				font-weight:600; 
+				font-family:Crimson Text;
+				font-size:25px;
+				display:inline-block;
 			}
-		}
-	}
-	
-	.text_content{
-		font-size:20px;
-		font-family:Lato;
-		font-weight:300;
-		color:#000;
-		line-height:180%;
-		
-		.bold{
-			font-weight:700;
-		}
-		
-		/*.highlight-text{
-			color:#A99977; 
-			font-style:italic; 
-			font-weight:600; 
-			font-family:Crimson Text;
-			font-size:25px;
-		}*/
-		
-		blockquote{
-			border:0;
-			margin:20px 0 40px 0;
-			padding:0;
-			color:#A99977; 
-			font-style:italic; 
-			font-weight:600; 
-			font-family:Crimson Text;
-			font-size:25px;
-			display:inline-block;
 		}
 	}
 }
@@ -263,10 +273,13 @@
 			}
 		}
 		
-		.media_content{		
-			.media_item{
-				.caption{
-					text-align:right;
+		.timeline_content{
+			
+			.media_content{		
+				.media_item{
+					.caption{
+						text-align:right;
+					}
 				}
 			}
 		}

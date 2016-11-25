@@ -67,33 +67,37 @@
 				$rows_output = 0;
 				
 				while ( have_rows('timeline') ) : the_row(); ?>
-				<div class="page_title" id="timeline_<?=$rows_output?>">
-					<?php the_sub_field('timeline_year'); ?>
-					<?php the_sub_field('timeline_title'); ?>
-				</div>
 				
-				<div class="clearfix">
-					<div class="col-sm-4 col-sm-push-8 media_content">
-						<?php 
-							$gallery_arr = get_sub_field('timeline_gallery'); 
-							
-							foreach($gallery_arr as $gallery_image):
-						?>
-						<div class="media_item">
-							<div class="media_wrapper">
-								<img src="<?=$gallery_image['url']?>" class="img-responsive" />
+				<div class="timeline_content" id="timeline_<?=$rows_output?>">
+					
+					<div class="page_title">
+						<?php the_sub_field('timeline_year'); ?>
+						<?php the_sub_field('timeline_title'); ?>
+					</div>
+					
+					<div class="clearfix">
+						<div class="col-sm-4 col-sm-push-8 media_content">
+							<?php 
+								$gallery_arr = get_sub_field('timeline_gallery'); 
+								
+								foreach($gallery_arr as $gallery_image):
+							?>
+							<div class="media_item">
+								<div class="media_wrapper">
+									<img src="<?=$gallery_image['url']?>" class="img-responsive" />
+								</div>
+								<?php if(!empty($gallery_image['caption'])){ ?>
+								<div class="caption"><?=$gallery_image['caption']?></div>
+								<?php } ?>
 							</div>
-							<?php if(!empty($gallery_image['caption'])){ ?>
-							<div class="caption"><?=$gallery_image['caption']?></div>
-							<?php } ?>
+							<?php endforeach; ?>
 						</div>
-						<?php endforeach; ?>
+						<div class="col-sm-8 col-sm-pull-4 text_content">
+							<?php the_sub_field('timeline_content'); ?>
+						</div>
 					</div>
-					<div class="col-sm-8 col-sm-pull-4 text_content">
-						<?php the_sub_field('timeline_content'); ?>
-					</div>
+					
 				</div>
-                
 			<?php
 					$rows_output++;
 				endwhile;

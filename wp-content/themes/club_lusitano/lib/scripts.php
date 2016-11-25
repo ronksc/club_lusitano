@@ -37,6 +37,7 @@ function roots_scripts() {
     );
   }
   wp_enqueue_style('google_fonts', 'https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i,700|Lato:300,300i,400,400i,700,700i|Raleway:400,400i', false, '');
+  wp_enqueue_style('font_awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css', false, '');
   wp_enqueue_style('roots_css', get_template_directory_uri() . $assets['css'], false, null);
 
   /**

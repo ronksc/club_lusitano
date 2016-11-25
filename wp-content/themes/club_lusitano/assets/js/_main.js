@@ -78,7 +78,11 @@ var Roots = {
 			  headerHeight = $('.navbar-default').outerHeight();
 			  footerHeight = $('.content-info').outerHeight();
 			  
-			  containerHeight = $(window).outerHeight() - headerHeight - footerHeight;
+			  if($(window).width() >= 1200){
+				  containerHeight = $(window).outerHeight() - headerHeight;
+			  }else{
+				  containerHeight = $(window).outerHeight() - headerHeight - footerHeight;  
+			  }
 			  
 			  $('.heritage_image').css({'height':containerHeight});
 			  $('.hover_text_content_wrapper').css({'height':0});
@@ -213,7 +217,7 @@ var Roots = {
 				e.preventDefault();
 				
 				var target = $(this).attr('href');
-				var target_buffer = $(target).outerHeight()+ 50;
+				var target_buffer = $(target).find('.page_title').outerHeight()+ 80;
 				
 				$('html, body').animate({
                     scrollTop: $(target).offset().top - target_buffer

@@ -11,7 +11,7 @@ while (have_posts()) : the_post(); ?>
 				<div class="category"><?=$categories[0]->name?></div>
 				
 			<?php if(get_field('title', $post->ID)){ ?>
-				<h2><?=strip_tags(get_field('title', $post->ID), '<em>')?></h2>
+				<h2><?=strip_tags(get_field('title', $post->ID), '<em>, <br>, </br>')?></h2>
 			<?php }else{ ?>
 				<h2><?php the_title(); ?></h2>
 			<?php } ?>
@@ -25,7 +25,11 @@ while (have_posts()) : the_post(); ?>
 					<span class="date"><? the_date(); ?></span>
 				</div>
 				
-				<div class="shareContainer"></div>
+				<div class="shareContainer addthis_toolbox addthis_default_style" addthis:title="<?php the_title(); ?>">
+					<a class="addthis_button_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+					<a class="addthis_button_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+					<a class="addthis_button_email"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+				</div>
 			</div>
 			
 			<div class="article_intro">
@@ -72,3 +76,6 @@ while (have_posts()) : the_post(); ?>
 </section>
 
 <?php endwhile; ?>
+
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":false};</script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58355aed61051595"></script>
