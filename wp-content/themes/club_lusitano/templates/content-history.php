@@ -1,13 +1,6 @@
 <section class="history_content">
 	<div class="container">
 		<div class="row">
-			<div class="hero_banner">
-				<?php
-					$top_image = get_field('top_image', $post->ID);
-				?>
-				<img src="<?=$top_image['url']?>" class="img-responsive" />
-			</div>
-			
 			<div class="page_title">
 				<?=get_field('heading', $post->ID);?>
 			</div>
