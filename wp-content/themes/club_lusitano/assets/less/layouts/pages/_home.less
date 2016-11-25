@@ -7,6 +7,8 @@
 .page-template-template-home{	
 	.home_banner_container{
 		background:#fff;
+		position:relative;
+		
 		&.slick-dotted.slick-slider{
 			margin-bottom:0;
 		}
@@ -49,6 +51,18 @@
 		.banner_item{
 			position:relative;
 			
+			&:after{
+				content:"";
+				position:absolute;
+				top:0;
+				left:0;
+				width:100%;
+				height:100%;
+				box-shadow: 215px 0 145px -25px rgba(0, 0, 0, 0.6) inset,
+							-215px 0px 145px -25px rgba(0, 0, 0, 0.6) inset;
+				z-index:700;
+			}
+			
 			.overlay_link{
 				position:absolute;
 				width:100%;
@@ -72,6 +86,7 @@
 				font-size:15px;
 				font-family:'Raleway';
 				text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+				z-index:900;
 				
 				p{
 					text-transform:uppercase;
