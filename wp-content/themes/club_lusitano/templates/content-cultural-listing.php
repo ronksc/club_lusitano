@@ -39,6 +39,8 @@
 						'post_type'  => 'post',
 						'post_status' => 'publish',
 						'cat' => $page_category,
+						'posts_per_page' => 10,
+						'paged' => get_query_var('paged'),
 						//'meta_key' => 'date',
 						'orderby' => 'date',
 						'order' => $sort
@@ -112,6 +114,33 @@
 					</div>
 				</div>
                 <?php endwhile; ?>
+                
+                <?php if ($wp_query->max_num_pages > 1) : ?>
+                  <div class="pagination clearfix">
+                    <div class="previous">
+                        <? 	
+                            if ($next_url = next_posts($wp_query->max_num_pages, false)){
+                                ?><a href="<?= $next_url ?>"><i class="fa fa-angle-left"></i> <?=_e('Previous Page');?></a><?php
+                            } else {
+                                ?><a href="#" class="disabled"><i class="fa fa-angle-left"></i> <?=_e('Previous Page');?></a><?php
+                            }
+                        ?>
+                    </div>
+                    <div class="next">
+                        <? 	
+                            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; 
+                            
+                            if($paged == 1){
+                                ?><a href="#" class="disabled"><?=_e('Next Page');?> <i class="fa fa-angle-right"></i></a><?php
+                            }else{
+                                $prev_url = previous_posts(false);
+                                ?><a href="<?= $prev_url ?>"><?=_e('Next Page');?> <i class="fa fa-angle-right"></i></a><?php
+                            }  
+                        ?>
+                    </div>
+                  </div>
+                  
+                <?php endif; ?>
 			</div>
 		</div>
 	</div>
