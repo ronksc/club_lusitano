@@ -84,6 +84,26 @@ a{
 	}
 }
 
+#html5-watermark{
+	//display:none!important;
+}
+
+.video_link{
+	position:relative;
+	display:block;
+	
+	&:after{
+		content:'';
+		position:absolute;
+		top:50%;
+		left:50%;
+		transform:translate(-50%, -50%);
+		background:url(../img/btn_video_play.png) no-repeat;
+		width:88px;
+		height:89px;
+	}
+}
+
 
 
 //===============================================================================

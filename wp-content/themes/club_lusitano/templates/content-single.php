@@ -58,13 +58,15 @@ while (have_posts()) : the_post(); ?>
 					</div>
 					<?php } 
 					}?>
-					<!-- Image -->
-					<!--<div class="media_container">
-						<div class="media_wrapper">
-							<img src="<?=get_stylesheet_directory_uri()?>/assets/img/cultural_heritage/img_article_dummy.jpg" class="img-responsive" />
-						</div>
-						<div class="caption">Michael Ho in his new F1 vehicle</div>
-					</div>-->
+					
+					<?php
+					$video_thumbnail = get_field("video_thumbnail", $post->ID);
+					$video_youtube_link = get_field("video_youtube_link", $post->ID); 
+					
+					if($video_youtube_link){
+					?>
+					<a class="video_link" href="JavaScript:html5Lightbox.showLightbox(3, '<?=$video_youtube_link?>', '');"><img src="<?=$video_thumbnail['url']?>" class="img-responsive"></a>
+					<? } ?>
 				</div>
 			
 				<div class="article_content col-sm-8 col-sm-pull-4">
