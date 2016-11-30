@@ -41,6 +41,17 @@ while (have_posts()) : the_post(); ?>
 			
 			<div class="clearfix">
 				<div class="article_media col-sm-4 col-sm-push-8">
+
+					<?php
+					$video_thumbnail = get_field("video_thumbnail", $post->ID);
+					$video_youtube_link = get_field("video_youtube_link", $post->ID); 
+					
+					if($video_youtube_link){
+					?>
+					<div class="media_container">
+						<a class="video_link" href="JavaScript:html5Lightbox.showLightbox(3, '<?=$video_youtube_link?>', '');"><img src="<?=$video_thumbnail['url']?>" class="img-responsive"></a>
+				    </div>
+					<? } ?>
 					<?php
 					$gallery_arr = get_field("gallery", $post->ID);
 						
@@ -59,14 +70,6 @@ while (have_posts()) : the_post(); ?>
 					<?php } 
 					}?>
 					
-					<?php
-					$video_thumbnail = get_field("video_thumbnail", $post->ID);
-					$video_youtube_link = get_field("video_youtube_link", $post->ID); 
-					
-					if($video_youtube_link){
-					?>
-					<a class="video_link" href="JavaScript:html5Lightbox.showLightbox(3, '<?=$video_youtube_link?>', '');"><img src="<?=$video_thumbnail['url']?>" class="img-responsive"></a>
-					<? } ?>
 				</div>
 			
 				<div class="article_content col-sm-8 col-sm-pull-4">

@@ -72,7 +72,7 @@
 						<div class="col-sm-4 col-sm-push-8 media_content">
 							<?php 
 								$gallery_arr = get_sub_field('timeline_gallery'); 
-								
+								if($gallery_arr){
 								foreach($gallery_arr as $gallery_image):
 							?>
 							<div class="media_item">
@@ -83,7 +83,10 @@
 								<div class="caption"><?=$gallery_image['caption']?></div>
 								<?php } ?>
 							</div>
-							<?php endforeach; ?>
+							<?php
+								endforeach; 
+								}
+							?>
 						</div>
 						<div class="col-sm-8 col-sm-pull-4 text_content">
 							<?php the_sub_field('timeline_content'); ?>
