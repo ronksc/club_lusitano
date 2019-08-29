@@ -17,15 +17,15 @@
 					<div class="slider_item">
 						<img src="<?=$image['url']?>" class="img-responsive" />
 					<?php
-					//if($key == 0){
-						echo '<div class="facilities_content_container visible-xs visible-sm hidden-md hidden-lg">';
-							echo '<div class="facilities_detail">';
-								echo '<div class="facilities_title">'.$details_page_name.'</div>';
-								//echo '<div class="facilities_content">'.$details_page_description.'</div>';
-								echo '<div class="facilities_content">'.$image['description'].'</div>';
-							echo '</div>';
-						echo '</div>';
-					//}
+					if($key == 0){?>
+						<div class="facilities_content_container visible-xs visible-sm hidden-md hidden-lg">
+							<div class="facilities_detail">
+								<div class="facilities_title"><?=$details_page_name?></div>
+								<div class="facilities_content"><?=$details_page_description?></div>
+							</div>
+						</div>
+					<?php
+					}
 					?>
 					</div>
 				<?php
@@ -47,10 +47,6 @@
 					<div class="facilities_content">
 						<?=$details_page_description?>
 					</div>
-					<?php 
-					foreach($details_page_gallery as $key => $image){
-						echo '<div class="facilities_content">'.$image['description'].'</div>';
-					}?>
 				</div>
 			</div>
 			<div class="clearfix nav_container">
